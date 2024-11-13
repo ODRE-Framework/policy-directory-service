@@ -1,0 +1,42 @@
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/policy:1010> a odrl:Set ;
+    odrl:permission [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ] .
+
+<http://example.com/policy:6153> a odrl:Offer ;
+    odrl:permission [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:66> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{retrieve_token()}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{token}}"^^xsd:string ] ;
+            odrl:target <http://example.com/document:124> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:66> ;
+            odrl:constraint [ odrl:leftOperand "{{retrieve_token()}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{token}}"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:124> ] ;
+    odrl:profile <http://example.com/odrl:profile:1> .
+
+<http://example.com/policy:6163> a odrl:Offer ;
+    odrl:permission [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{retrieve_token()}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{token}}"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ] ;
+    odrl:profile <http://example.com/odrl:profile:10> .
+
