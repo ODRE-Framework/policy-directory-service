@@ -1,10 +1,24 @@
-from fastapi import FastAPI, HTTPException, Body, Request, Response
+from fastapi import FastAPI, HTTPException, Body, Request, Response, Header
 from pydantic import BaseModel
 from pyodre.odre import ODRE
 from rdflib import Graph
 import re
 import json
 import os
+from fastapi.middleware.cors import CORSMiddleware
+
+# from pydantic import BaseSettings
+#
+# class AppConfig(BaseSettings):
+#     app_name: str
+#     version: str
+#     allowed_origins: list[str]
+#     database_url: str
+#     debug: bool
+#
+# with open("config.json") as config_file:
+#     config_data = json.load(config_file)
+#     config = AppConfig(**config_data)
 
 app = FastAPI()
 data_file = "policies.json"
@@ -13,6 +27,13 @@ data_graph = "output.ttl"
 g = Graph()
 g.parse("output.ttl", format="turtle")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # O especifica dominios como ["http://tu-dominio.com"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Modelo datos
 class Policy(BaseModel):
@@ -166,6 +187,29 @@ def check_content(request):
         request_format = request.headers["Content-Type"]
         if request_format != "application/ld+json":
             raise HTTPException(status_code=400, detail="Unsupported MIME type, only supported application/ld+json")
+
+
+@app.post("/api/update-data")
+async def update_data(request: Request, authorization: str = Header(None)):
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Token no proporcionado o inválido")
+
+    token = authorization.split(" ")[1]
+
+    # # Verifica el token (puedes usar un sistema real de autenticación aquí)
+    # if token != "user12345":  # Simula una validación de token
+    #     raise HTTPException(status_code=403, detail="Token no autorizado")
+
+    try:
+        data = await request.json()
+        # # Simula la comprobación de datos del estado actualizado
+        # if "status" not in data or "timestamp" not in data:
+        #     raise HTTPException(status_code=400, detail="Datos incompletos")
+        #
+        # # Aquí puedes procesar y almacenar los datos
+        # return {"message": "Datos procesados correctamente", "data": data}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 
 def check_interpolation(policy):

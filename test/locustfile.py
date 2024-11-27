@@ -5,7 +5,7 @@ class PolicyUser(HttpUser):
 
     @task
     def evaluate_policy(self):
-        self.client.get("/api/policy/evaluate/policy:123")
+        self.client.get("/api/policy/evaluate/policy:6165")
 
 
 #locust -f locustfile.py
