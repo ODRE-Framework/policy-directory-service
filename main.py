@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Body, Request
+from fastapi import FastAPI, HTTPException, Body, Request, Response
 from pydantic import BaseModel
 from pyodre.odre import ODRE
 from rdflib import Graph
@@ -29,10 +29,8 @@ def load_data():
 
 def save_data(data):
     for policy in data.values():
-        print(policy)
         g.parse(data=json.dumps(policy), format="json-ld")
     g.serialize(destination=data_graph, format="turtle")
-    print(g)
     with open(data_file, "w") as file:
         json.dump(data, file, indent=4)
 
@@ -44,8 +42,9 @@ def save_evaluation_log(evaluation_log):
 
 
 # CRUD Endpoints
-@app.post("/api/policy/")
-async def create_policy(policy: Policy):
+@app.post("/api/policy/", status_code=201)
+async def create_policy(policy: Policy, response: Response, request: Request):
+    check_content(request)
     data = load_data()
     policy_uid = policy.odrl_policy.get("uid").split(":")[-1]
     if not policy_uid:
@@ -54,7 +53,8 @@ async def create_policy(policy: Policy):
         raise HTTPException(status_code=400, detail="ID ya existe")
     data[policy_uid] = policy.odrl_policy
     save_data(data)
-    return {"message": "Política creada", "id": policy_uid}
+    response.headers["Content-Type"] = "application/ld+json"
+    return policy
 
 
 @app.get("/api/policy/{id}")
@@ -89,7 +89,10 @@ async def delete_policy(id: str):
 
 # Endpoint evaluar políticas
 @app.get("/api/policy/evaluate/{id}")
-async def evaluate_policy(id: str, request: Request):
+async def evaluate_policy_id(id: str, request: Request):
+    query_params = request.query_params
+
+    interpolations = {key: query_params.get(key) for key in query_params.keys()}
     data = load_data()
     policy = data.get(id)
     if not policy:
@@ -97,7 +100,7 @@ async def evaluate_policy(id: str, request: Request):
 
     try:
         odre = ODRE()
-        evaluation_result = odre.enforce(policy)
+        evaluation_result = odre.enforce(policy=json.dumps(policy), interpolations=interpolations)
 
         evaluation_log = {
             "parameters": dict(request.query_params),
@@ -105,13 +108,36 @@ async def evaluate_policy(id: str, request: Request):
         }
         save_evaluation_log(evaluation_log)
 
-        return {"policy": policy, "evaluation_result": evaluation_result}
+        return evaluation_result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/policy/evaluate")
+async def evaluate_policy(policy: Policy, request: Request):
+    if not policy:
+        raise HTTPException(status_code=404, detail="Política no encontrada")
+    check_content(request)
+    query_params = request.query_params
+
+    interpolations = {key: query_params.get(key) for key in query_params.keys()}
+    try:
+        odre = ODRE()
+        evaluation_result = odre.enforce(policy=json.dumps(policy.dict()), interpolations=interpolations)
+
+        evaluation_log = {
+            "parameters": dict(request.query_params),
+            "evaluation_result": evaluation_result
+        }
+        save_evaluation_log(evaluation_log)
+
+        return evaluation_result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
 # Endpoint consultas SPARQL
-@app.post("/sparql")
+@app.post("/api/policy/sparql")
 async def execute_sparql(body: dict = Body(...)):
     query = body.get('query')
     if not query:
@@ -124,3 +150,26 @@ async def execute_sparql(body: dict = Body(...)):
         return {"query": query, "result": [str(result) for result in results]}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# test junit
+# test de escalabilidad
+# test de evaluar con todas las de la demo de collab, tambien concurrentes, no se pueden las inyecciones de funciones
+# todos gráfica de tiempos
+
+def check_content(request):
+    if "Accept" in request.headers:
+        response_format = request.headers["Accept"]
+        if response_format != "application/ld+json":
+            raise HTTPException(status_code=400, detail="Unsupported MIME type, only supported application/ld+json")
+    if "Content-Type" in request.headers:
+        request_format = request.headers["Content-Type"]
+        if request_format != "application/ld+json":
+            raise HTTPException(status_code=400, detail="Unsupported MIME type, only supported application/ld+json")
+
+
+def check_interpolation(policy):
+    for permission in policy.get("permission", []):
+        for constraint in permission.get("constraint", []):
+            if "{{token}}" in constraint.get("leftOperand", ""):
+                constraint["leftOperand"] = constraint["leftOperand"].replace("{{token}}", "valor_real")

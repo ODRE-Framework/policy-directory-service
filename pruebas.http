@@ -1,7 +1,7 @@
 ### POST 1 request with a header
 POST http://localhost:8000/api/policy/
-Accept: application/json
-Content-Type: application/json
+Accept: application/ld+json
+Content-Type: application/ld+json
 Body:
 
 {
@@ -18,15 +18,15 @@ Body:
 
 ### POST 2 request with a header
 POST http://localhost:8000/api/policy/
-Accept: application/json
-Content-Type: application/json
+Accept: application/ld+json
+Content-Type: application/ld+json
 Body:
 
 {
     "odrl_policy": {
     "@context": "http://www.w3.org/ns/odrl.jsonld",
     "@type": "Offer",
-    "uid": "http://example.com/policy:6163",
+    "uid": "http://example.com/policy:6165",
     "profile": "http://example.com/odrl:profile:10",
     "permission": [{
        "target": "http://example.com/document:1234",
@@ -37,9 +37,34 @@ Body:
            "operator": "lt",
            "rightOperand":  { "@value": "2025-01-01", "@type": "xsd:date" }
        },{
-           "leftOperand": { "@value": "{{retrieve_token()}}" , "@type": "xsd:string" },
+           "leftOperand": { "@value": "{{token}}" , "@type": "xsd:string" },
            "operator": "eq",
-           "rightOperand":  { "@value": "{{token}}", "@type": "xsd:string" }
+           "rightOperand":  { "@value": "AAA", "@type": "xsd:string" }
+       }]
+   }]
+  }
+}
+
+### POST 3 request with a header
+POST http://localhost:8000/api/policy/
+Accept: application/ld+json
+Content-Type: application/ld+json
+Body:
+
+{
+    "odrl_policy": {
+    "@context": "http://www.w3.org/ns/odrl.jsonld",
+    "@type": "Offer",
+    "uid": "http://example.com/policy:6164",
+    "profile": "http://example.com/odrl:profile:10",
+    "permission": [{
+       "target": "http://example.com/document:1234",
+       "assigner": "http://example.com/org:616",
+       "action": "distribute",
+       "constraint": [{
+           "leftOperand": "dateTime",
+           "operator": "lt",
+           "rightOperand":  { "@value": "2025-01-01", "@type": "xsd:date" }
        }]
    }]
   }
@@ -47,23 +72,55 @@ Body:
 
 
 ### GET request with parameter
-GET http://localhost:8000/api/policy/1010
-Accept: application/json
+GET http://localhost:8000/api/policy/6165
+Accept: application/ld+json
 
 ### GET request with a header
 GET http://localhost:8000/api/policy/
-Accept: application/json
+Accept: application/ld+json
 
 ### DELETE request with parameter
-DELETE http://localhost:8000/api/policy/6163
-Accept: application/json
+DELETE http://localhost:8000/api/policy/1010
+Accept: application/ld+json
 
 ### GET request for evaluate
-GET http://localhost:8000/api/policy/evaluate/1010
-Accept: application/json
+GET http://localhost:8000/api/policy/evaluate/6165?token=AAA
+Accept: application/ld+json
+
+### POST request for evaluate
+POST http://localhost:8000/api/policy/evaluate?token=AAA
+Accept: application/ld+json
+Content-Type: application/ld+json
+Body:
+
+{
+    "odrl_policy": {
+        "@context": "http://www.w3.org/ns/odrl.jsonld",
+        "@type": "Offer",
+        "uid": "http://example.com/policy:6165",
+        "profile": "http://example.com/odrl:profile:10",
+        "permission": [{
+            "target": "http://example.com/document:1234",
+            "assigner": "http://example.com/org:616",
+            "action": "distribute",
+            "constraint": [{
+                "leftOperand": "dateTime",
+                "operator": "lt",
+                "rightOperand": { "@value": "2025-01-01", "@type": "xsd:date" }
+            }, {
+                "leftOperand": { "@value": "{{token}}", "@type": "xsd:string" },
+                "operator": "eq",
+                "rightOperand": { "@value": "AAA", "@type": "xsd:string" }
+            }]
+        }]
+    }
+}
+
+
+
 
 ### POST 1 request for sparql
-POST http://localhost:8000/sparql
+POST http://localhost:8000/api/policy/sparql
 Accept: application/json
 Content-Type: application/json
 Body:
@@ -73,7 +130,7 @@ Body:
 }
 
 ### POST 2 request for sparql
-POST http://localhost:8000/sparql
+POST http://localhost:8000/api/policy/sparql
 Accept: application/json
 Content-Type: application/json
 Body:
@@ -83,7 +140,7 @@ Body:
 }
 
 ### POST 3 request for sparql
-POST http://localhost:8000/sparql
+POST http://localhost:8000/api/policy/sparql
 Accept: application/json
 Content-Type: application/json
 Body:
@@ -93,7 +150,7 @@ Body:
 }
 
 ### POST 4 request for sparql
-POST http://localhost:8000/sparql
+POST http://localhost:8000/api/policy/sparql
 Accept: application/json
 Content-Type: application/json
 Body:
