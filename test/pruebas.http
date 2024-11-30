@@ -70,9 +70,33 @@ Body:
   }
 }
 
+### POST 4 request with a header
+POST http://localhost:8000/api/policy/
+Accept: application/ld+json
+Content-Type: application/ld+json
+Body:
+
+{
+    "odrl_policy": {
+    "@context": "http://www.w3.org/ns/odrl.jsonld",
+    "@type": "Offer",
+    "uid": "http://example.com/policy:5",
+    "profile": "https://helio.auroral.linkeddata.es/jcano",
+    "permission": [{
+       "target": "https://helio.auroral.linkeddata.es/api/luminosity/data",
+       "action": "read",
+       "constraint": [{
+           "leftOperand": { "@value": "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}" , "@type": "xsd:string" },
+           "operator": "eq",
+           "rightOperand":  { "@value": "On", "@type": "xsd:string" }
+       }]
+   }]
+  }
+}
+
 
 ### GET request with parameter
-GET http://localhost:8000/api/policy/6165
+GET http://localhost:8000/api/policy/5
 Accept: application/ld+json
 
 ### GET request with a header
@@ -84,7 +108,7 @@ DELETE http://localhost:8000/api/policy/1010
 Accept: application/ld+json
 
 ### GET request for evaluate
-GET http://localhost:8000/api/policy/evaluate/6165?token=AAA
+GET http://localhost:8000/api/policy/evaluate/5?key=status_var&id=5
 Accept: application/ld+json
 
 ### POST request for evaluate
