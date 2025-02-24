@@ -6,15 +6,27 @@ Body:
 
 {
     "odrl_policy": {
-    "@context": "http://www.w3.org/ns/odrl.jsonld",
-    "@type": "Set",
-    "uid": "http://example.com/policy:1010",
-    "permission": [{
-        "target": "http://example.com/asset:9898.movie",
-        "action": "use"
-    }]
-  }
+        "@context": "http://www.w3.org/ns/odrl.jsonld",
+        "@type": "Offer",
+        "uid": "http://example.com/policy:3331",
+        "profile": "http://example.com/odrl/profile/10",
+        "permission": [
+            {
+                "target": "https://arxiv.org/pdf/2409.17602v1",
+                "assigner": "http://example.com/org/616",
+                "action": "display" ,
+                "constraint": [
+                    {
+                        "leftOperand": { "@value": "{{face_uuid}}" , "@type": "xsd:string" },
+                        "operator": "eq",
+                        "rightOperand": { "@value": "f7bc80a8-a2bc-4fb3-9caf-4e65ebe3c89a", "@type": "xsd:string" }
+                    }
+                ]
+            }
+        ]
+    }
 }
+
 
 ### POST 2 request with a header
 POST http://localhost:8000/api/policy/
@@ -96,7 +108,7 @@ Body:
 
 
 ### GET request with parameter
-GET http://localhost:8000/api/policy/5
+GET http://localhost:8000/api/policy/3331
 Accept: application/ld+json
 
 ### GET request with a header
@@ -104,11 +116,15 @@ GET http://localhost:8000/api/policy/
 Accept: application/ld+json
 
 ### DELETE request with parameter
-DELETE http://localhost:8000/api/policy/1010
+DELETE http://localhost:8000/api/policy/3331
 Accept: application/ld+json
 
 ### GET request for evaluate
-GET http://localhost:8000/api/policy/evaluate/5?key=status_var&id=5
+GET http://localhost:8000/api/policy/evaluate/3331?key=face_recognition&id=3331?face_uuid=cd42c43d-18c4-445f-b5a6-814bc29cb505
+Accept: application/ld+json
+
+### GET request for evaluate
+GET http://localhost:8000/api/policy/evaluate/3331?key=face_recognition&id=3331&face_uuid=cd42c43d-18c4-445f-b5a6-814bc29cb505
 Accept: application/ld+json
 
 ### POST request for evaluate
@@ -119,26 +135,34 @@ Body:
 
 {
     "odrl_policy": {
-        "@context": "http://www.w3.org/ns/odrl.jsonld",
-        "@type": "Offer",
-        "uid": "http://example.com/policy:6165",
-        "profile": "http://example.com/odrl:profile:10",
-        "permission": [{
-            "target": "http://example.com/document:1234",
-            "assigner": "http://example.com/org:616",
-            "action": "distribute",
-            "constraint": [{
-                "leftOperand": "dateTime",
-                "operator": "lt",
-                "rightOperand": { "@value": "2025-01-01", "@type": "xsd:date" }
-            }, {
-                "leftOperand": { "@value": "{{token}}", "@type": "xsd:string" },
-                "operator": "eq",
-                "rightOperand": { "@value": "AAA", "@type": "xsd:string" }
-            }]
-        }]
-    }
+    "@context": "http://www.w3.org/ns/odrl.jsonld",
+    "@type": "Offer",
+    "uid": "http://example.com/policy/6165",
+    "profile": "http://example.com/odrl/profile/10",
+    "permission": [
+        {
+            "target": "http://example.com/document/1234",
+            "assigner": "http://example.com/org/616",
+            "action": { "@id": "http://example.com/odrl/action/distribute_document" },
+            "constraint": [
+                {
+                    "leftOperand": { "@id": "http://example.com/odrl/property/recognized_face_uri" },
+                    "operator": { "@id": "http://www.w3.org/ns/odrl/2/eq" },
+                    "rightOperand": { "@id": "http://example.com/faces/database_query" }
+                },
+                {
+                    "leftOperand": { "@id": "http://example.com/odrl/property/token" },
+                    "operator": { "@id": "http://www.w3.org/ns/odrl/2/eq" },
+                    "rightOperand": { "@value": "{{request.token}}", "@type": "xsd:string" }
+                }
+            ]
+        }
+    ]
 }
+
+
+}
+
 
 
 
