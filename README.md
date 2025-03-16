@@ -30,9 +30,12 @@ docker-compose up
 ```
 
 ```yaml
+version: '3.0'
 services:
-  policy-directory-service:
+  directory:
+    container_name: odre-pds
     image: acimmino/odre-pds:latest
+    restart: unless-stopped
     ports:
       - "8000:8000"
 
