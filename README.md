@@ -18,6 +18,45 @@ A [demo service](https://odrldirectory.linkeddata.es/) is available to test the 
 
 ---
 
+## **Running with Docker**
+
+### **1️⃣ Docker Compose Deployment**
+
+Copy the following **`docker-compose.yml`** file and run:
+
+```bash
+docker-compose up
+
+```
+
+```yaml
+services:
+  policy-directory-service:
+    image: acimmino/odre-pds:latest
+    ports:
+      - "8000:8000"
+
+```
+
+### **2️⃣ Manual Docker Deployment**
+
+1. **Build the Docker Image**:
+    
+    ```bash
+    docker build -t police-directory-api .
+    
+    ```
+    
+2. **Run the Container**:
+    
+    ```bash
+    docker run -p 8000:8000 police-directory-api
+    
+    ```
+    
+
+---
+
 ## **Installation**
 ### 1️⃣ **Clone the Repository**
 ```bash
@@ -127,44 +166,7 @@ Content-Type: application/json
 
 ---
 
-## **Running with Docker**
 
-### **1️⃣ Docker Compose Deployment**
-
-Copy the following **`docker-compose.yml`** file and run:
-
-```bash
-docker-compose up
-
-```
-
-```yaml
-services:
-  policy-directory-service:
-    image: acimmino/odre-pds:latest
-    ports:
-      - "8000:8000"
-
-```
-
-### **2️⃣ Manual Docker Deployment**
-
-1. **Build the Docker Image**:
-    
-    ```bash
-    docker build -t police-directory-api .
-    
-    ```
-    
-2. **Run the Container**:
-    
-    ```bash
-    docker run -p 8000:8000 police-directory-api
-    
-    ```
-    
-
----
 
 ## **Contributions**
 
