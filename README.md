@@ -45,7 +45,7 @@ Copy the following receipe and run `docker-compose up` command:
 ```yml
 services:
   policy-directory-service:
-    image: acimmino/odre-pds:1.0.1
+    image: acimmino/odre-pds:latest
     ports:
       - "8000:8000"
 ```
