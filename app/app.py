@@ -7,7 +7,7 @@ import re
 import httpx
 import traceback
 from fastapi.middleware.cors import CORSMiddleware
-from .services import *
+from services import *
 
 # from pydantic import BaseSettings
 #
@@ -340,6 +340,3 @@ FUNCTIONS_MAP = {
     "face_recognition": face_recognition
 }
 
-# if __name__ == "_main_":
-#     uvicorn.run("main:app", host="0.0.0.0", port=9000, reload=False, log_level="debug", debug=True,
-#                 workers=1, limit_concurrency=1, limit_max_requests=1)
