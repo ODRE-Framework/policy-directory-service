@@ -29,12 +29,24 @@ Este proyecto es una API desarrollada con [FastAPI](https://fastapi.tiangolo.com
 
 ## Uso
 
-1. Ejecuta el servidor FastAPI:
+### Code deployment
+1. Download the current git project
+2. Navigate to the `./app` folder and run the following command:
    ```bash
-   uvicorn main:app --reload
+   uvicorn app:app --reload
    ```
+3. Una vez que el servidor esté en funcionamiento, puedes acceder a la documentación generada automáticamente por Swagger. Accede a la documentación de la API en [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs). Esta interfaz permite probar los endpoints y ver la documentación de la API. 
 
-2. Una vez que el servidor esté en funcionamiento, puedes acceder a la documentación generada automáticamente por Swagger. Accede a la documentación de la API en [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs). Esta interfaz permite probar los endpoints y ver la documentación de la API. 
+### Docker deployment
+
+Copy the following receipe and run `docker-compose up` command:
+```yml
+services:
+  policy-directory-service:
+    image: acimmino/odre-pds:1.0.1
+    ports:
+      - "8000:8000"
+```
 
 ## Ejemplo de Consulta SPARQL
 
