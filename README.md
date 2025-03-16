@@ -2,6 +2,8 @@
 
 Este proyecto es una API desarrollada con [FastAPI](https://fastapi.tiangolo.com/) para gestionar y consultar políticas de permisos utilizando un modelo RDF. Se enfoca en la creación, almacenamiento y consulta de políticas de acceso en formato ODRL.
 
+A [demo service](https://odrldirectory.linkeddata.es/) can be access to try the service.
+
 ## Características
 
 - **EndPoint `/sparql`**: permite realizar consultas SPARQL a través de HTTP POST.
