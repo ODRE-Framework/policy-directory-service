@@ -3,12 +3,12 @@ from rdflib import Graph
 import json
 import os
 
+
 DATA_FILE = "../policies.json"
 EVAL_LOG_FILE = "../evaluation_log.json"
 DATA_GRAPH = "output.ttl"
 TOKENS_FILE = "tokens.json"
 STATUS_FILE = "../status.json"
-
 
 def initialice_graph():
     g = Graph()

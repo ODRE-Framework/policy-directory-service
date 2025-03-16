@@ -2,6 +2,7 @@ import json
 from pydantic import BaseSettings
 
 
+
 class Config(BaseSettings):
     app_name: str
     version: str

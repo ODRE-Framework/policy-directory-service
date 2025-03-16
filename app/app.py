@@ -24,8 +24,35 @@ from .services import *
 import uvicorn
 
 from fastapi.responses import RedirectResponse
+from fastapi.openapi.utils import get_openapi
 
 app = FastAPI()
+
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+
+    openapi_schema = get_openapi(
+        title="API de Políticas",
+        version="1.0.0",
+        description="API para gestionar políticas de privacidad",
+        routes=app.routes,
+    )
+
+    # Configurar Swagger para aceptar application/ld+json en las peticiones
+    for path in openapi_schema["paths"].values():
+        for method in path:
+            if "requestBody" in path[method]:
+                path[method]["requestBody"]["content"] = {
+                    "application/ld+json": path[method]["requestBody"]["content"]["application/json"]
+                }
+
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+
+
+app.openapi = custom_openapi
 
 g = initialice_graph()
 
@@ -54,9 +81,9 @@ async def create_policy(policy: Policy, response: Response, request: Request):
     data = load_data()
     policy_uid = policy.odrl_policy.get("uid").split(":")[-1]
     if not policy_uid:
-        raise HTTPException(status_code=400, detail="La política debe tener un 'uid' como ID")
+        raise HTTPException(status_code=400, detail="The policy must have a 'uid' as an ID")
     if policy_uid in data:
-        raise HTTPException(status_code=400, detail="ID ya existe")
+        raise HTTPException(status_code=400, detail="ID already exists")
     data[policy_uid] = policy.odrl_policy
     save_data(data, g)
     response.headers["Content-Type"] = "application/ld+json"
@@ -64,10 +91,11 @@ async def create_policy(policy: Policy, response: Response, request: Request):
 
 
 @app.get("/api/policy/{id}")
-async def get_policy(id: str):
+async def get_policy(id: str, response: Response, request: Request) :
     data = load_data()
     if id not in data:
-        raise HTTPException(status_code=404, detail="Política no encontrada")
+        raise HTTPException(status_code=404, detail="Policy not found")
+    response.headers["Content-Type"] = "application/ld+json"
     return data[id]
 
 
@@ -75,24 +103,47 @@ async def get_policy(id: str):
 async def get_policies(response: Response):
     data = load_data()
     if not data:
-        raise HTTPException(status_code=404, detail="No hay políticas almacenadas")
+        raise HTTPException(status_code=404, detail="No stored policies found")
     response.headers["Content-Type"] = "application/ld+json"
     return data
 
+@app.put("/api/policy/{id}")
+async def update_policy(id: str, policy: Policy, response: Response):
+
+    data = load_data()
+
+    if id not in data:
+        raise HTTPException(status_code=404, detail="Policy not found")
+
+    del data[id]
+    save_data(data, g)
+    policy_uid = policy.odrl_policy.get("uid").split(":")[-1]
+    if not policy_uid:
+        raise HTTPException(status_code=400, detail="The policy must have a 'uid' as an ID")
+
+    if policy_uid != id:
+        raise HTTPException(status_code=400, detail="The 'uid' in the policy does not match the provided ID")
+
+    data[policy_uid] = policy.odrl_policy
+    save_data(data, g)
+
+    response.headers["Content-Type"] = "application/ld+json"
+    return {"message": "Policy successfully updated", "policy_id": policy_uid}
+
 
 @app.delete("/api/policy/{id}")
-async def delete_policy(id: str):
+async def delete_policy(id: str, response: Response):
     data = load_data()
     if id not in data:
-        raise HTTPException(status_code=404, detail="Política no encontrada")
+        raise HTTPException(status_code=404, detail="Policy not found")
 
     policy_uri = f"http://example.com/policy:{id}"
     g.remove((policy_uri, None, None))
 
     del data[id]
     save_data(data, g)
-    return {"message": "Política eliminada"}
-
+    response.headers["Content-Type"] = "application/ld+json"
+    return {"message": "Policy successfully deleted", "id": id}
 
 @app.get("/api/policy/evaluate/{id}")
 async def evaluate_policy_id(id: str, request: Request):
@@ -102,27 +153,20 @@ async def evaluate_policy_id(id: str, request: Request):
     try:
         key_function = interpolations.get("key")
         if key_function and key_function not in FUNCTIONS_MAP:
-            raise HTTPException(status_code=400, detail="Función no válida para 'key'")
+            raise HTTPException(status_code=400, detail="Invalid function for 'key'")
 
-        selected_function = FUNCTIONS_MAP.get(key_function)
-        interpolations["selected_function"] = selected_function
+        if FUNCTIONS_MAP.get(key_function):
+            interpolations["selected_function"] = FUNCTIONS_MAP.get(key_function)
 
-        if "face_uuid" not in interpolations:
-            raise HTTPException(status_code=400, detail="Falta el parámetro 'face_uuid'")
-        interpolations["face_uuid"] = interpolations.pop("face_uuid")
+        if "face_uuid" in interpolations:
+            interpolations["face_uuid"] = interpolations.pop("face_uuid")
 
         data = load_data()
-        print("Política cargada:", json.dumps(data["3331"], indent=4))
-
         policy = data.get(id)
-        print("Face UUID recibido:", interpolations["face_uuid"])
-        print("Face UUID en la política:", policy["permission"][0]["constraint"][0]["rightOperand"]["@value"])
-
         if not policy:
-            raise HTTPException(status_code=404, detail="Política no encontrada")
+            raise HTTPException(status_code=404, detail="Policy not found")
 
         odre = ODRE()
-        print("Evaluando política con ODRE...")
 
         evaluation_result = odre.enforce(policy=json.dumps(policy), interpolations=interpolations)
 
@@ -132,11 +176,11 @@ async def evaluate_policy_id(id: str, request: Request):
             async with httpx.AsyncClient() as client:
                 response = await client.get(document_url)
                 if response.status_code == 200:
-                    return Response(content=response.content, media_type="application/pdf")
+                    return Response(content=response.content, media_type="application/text")
                 else:
-                    raise HTTPException(status_code=500, detail="Error al obtener el documento")
+                    raise HTTPException(status_code=500, detail="Error retrieving the document")
         else:
-            raise HTTPException(status_code=403, detail="Acceso denegado")
+            raise HTTPException(status_code=403, detail="Denied access")
 
     except Exception as e:
         traceback.print_exc()
@@ -144,7 +188,7 @@ async def evaluate_policy_id(id: str, request: Request):
 
 
 @app.post("/api/policy/evaluate")
-async def evaluate_policy(policy: Policy, request: Request):
+async def evaluate_policy(policy: Policy, request: Request, response: Response):
     if not policy:
         raise HTTPException(status_code=404, detail="Policy not found")
     check_content(request)
@@ -160,7 +204,7 @@ async def evaluate_policy(policy: Policy, request: Request):
             "evaluation_result": evaluation_result
         }
         save_evaluation_log(evaluation_log)
-
+        response.headers["Content-Type"] = "application/ld+json"
         return evaluation_result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

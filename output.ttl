@@ -1,8 +1,213 @@
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix time1: <https://w3id.org/def/odre-time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.com/policy/3331> a odrl:Offer ;
     odrl:permission [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:access ;
             odrl:assigner <http://example.com/org/616> ;
             odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
                     odrl:operator odrl:eq ;
@@ -214,10 +419,198 @@
         [ odrl:action odrl:use ;
             odrl:target <http://example.com/asset:9898.movie> ],
         [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
+            odrl:target <http://example.com/asset:9898.movie> ],
+        [ odrl:action odrl:use ;
             odrl:target <http://example.com/asset:9898.movie> ] .
 
 <http://example.com/policy:3331> a odrl:Offer ;
     odrl:permission [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "03cdfe31-f81c-40b8-b30a-b273c54dd26c"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "c2eb3995-9ef0-47f9-8649-c1c80c4bccee"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "a0fbc6eb-bc0d-4489-b581-f102107c86fd"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "03cdfe31-f81c-40b8-b30a-b273c54dd26c"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "6548492d-b3b4-4d07-a9d0-68308ee7ce1c"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "3edbccde-fa63-4bb4-a506-04f06970713c"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "3edbccde-fa63-4bb4-a506-04f06970713c"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "3edbccde-fa63-4bb4-a506-04f06970713c"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
             odrl:assigner <http://example.com/org/616> ;
             odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
                     odrl:operator odrl:eq ;
@@ -227,7 +620,7 @@
             odrl:assigner <http://example.com/org/616> ;
             odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
                     odrl:operator odrl:eq ;
-                    odrl:rightOperand "f7bc80a8-a2bc-4fb3-9caf-4e65ebe3c89a"^^xsd:string ] ;
+                    odrl:rightOperand "3edbccde-fa63-4bb4-a506-04f06970713c"^^xsd:string ] ;
             odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
         [ odrl:action <https://example.com/odrl/action/view> ;
             odrl:assigner <http://example.com/org/616> ;
@@ -265,6 +658,12 @@
                     odrl:operator odrl:eq ;
                     odrl:rightOperand "{{face_uuid}}"^^xsd:string ] ;
             odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "ce85b8a3-b6c5-4b97-850e-ca875d49c1b2"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
         [ odrl:action <http://example.com/odrl/action/view_pdf> ;
             odrl:assigner <http://example.com/org/616> ;
             odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
@@ -282,6 +681,24 @@
             odrl:constraint [ odrl:leftOperand <http://example.com/odrl/property/recognized_face_uuid> ;
                     odrl:operator odrl:eq ;
                     odrl:rightOperand "{{request.face_uuid}}"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "7cc7a7ab-b4b0-49db-b251-1b2936efc287"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "653c4f8d-73a8-4d95-a07a-faab1d65a262"^^xsd:string ] ;
+            odrl:target <https://arxiv.org/pdf/2409.17602v1> ],
+        [ odrl:action odrl:display ;
+            odrl:assigner <http://example.com/org/616> ;
+            odrl:constraint [ odrl:leftOperand "{{face_uuid}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "f7bc80a8-a2bc-4fb3-9caf-4e65ebe3c89a"^^xsd:string ] ;
             odrl:target <https://arxiv.org/pdf/2409.17602v1> ] ;
     odrl:profile <http://example.com/odrl/profile/10> .
 
@@ -425,9 +842,340 @@
             odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
                     odrl:operator odrl:eq ;
                     odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
             odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ] ;
     odrl:profile <https://helio.auroral.linkeddata.es/jcano> ;
     odrl:status "Off" .
+
+<http://example.com/policy:5000> a odrl:Offer ;
+    odrl:permission [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:lteq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.w3.org/TR/2018/REC-odrl-model-20180215/> ] ;
+    odrl:profile <https://example.com/user/12345> .
+
+<http://example.com/policy:5001> a odrl:Offer ;
+    odrl:permission [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand time1:time ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "23:59:00"^^xsd:time ] ;
+            odrl:target <https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence> ] ;
+    odrl:profile <https://example.com/user/12345> .
 
 <http://example.com/policy:6153> a odrl:Offer ;
     odrl:permission [ odrl:action odrl:distribute ;
@@ -804,11 +1552,521 @@
             odrl:constraint [ odrl:leftOperand odrl:dateTime ;
                     odrl:operator odrl:lt ;
                     odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
             odrl:target <http://example.com/document:1234> ] ;
     odrl:profile <http://example.com/odrl:profile:10> .
 
 <http://example.com/policy:6165> a odrl:Offer ;
     odrl:permission [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ],
+                [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
+            odrl:assigner <http://example.com/org:616> ;
+            odrl:constraint [ odrl:leftOperand "{{token}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "AAA"^^xsd:string ],
+                [ odrl:leftOperand odrl:dateTime ;
+                    odrl:operator odrl:lt ;
+                    odrl:rightOperand "2025-01-01"^^xsd:date ] ;
+            odrl:target <http://example.com/document:1234> ],
+        [ odrl:action odrl:distribute ;
             odrl:assigner <http://example.com/org:616> ;
             odrl:constraint [ odrl:leftOperand odrl:dateTime ;
                     odrl:operator odrl:lt ;
@@ -1164,6 +2422,176 @@
 
 <https://helio.auroral.linkeddata.es/policy/5> a odrl:Offer ;
     odrl:permission [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
+            odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
+                    odrl:operator odrl:eq ;
+                    odrl:rightOperand "On"^^xsd:string ] ;
+            odrl:target <https://helio.auroral.linkeddata.es/api/luminosity/data> ],
+        [ odrl:action odrl:read ;
             odrl:constraint [ odrl:leftOperand "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}"^^xsd:string ;
                     odrl:operator odrl:eq ;
                     odrl:rightOperand "On"^^xsd:string ] ;

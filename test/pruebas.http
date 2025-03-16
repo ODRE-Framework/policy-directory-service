@@ -1,3 +1,33 @@
+### PUT 1 request with a header
+PUT http://localhost:8000/api/policy/3331
+Accept: application/ld+json
+Content-Type: application/ld+json
+
+{
+    "odrl_policy": {
+        "@context": "http://www.w3.org/ns/odrl.jsonld",
+        "@type": "Offer",
+        "uid": "http://example.com/policy:3331",
+        "profile": "http://example.com/odrl/profile/10",
+        "permission": [
+            {
+                "target": "https://arxiv.org/pdf/2409.17602v1",
+                "assigner": "http://example.com/org/616",
+                "action": "display",
+                "constraint": [
+                    {
+                        "leftOperand": { "@value": "{{face_uuid}}", "@type": "xsd:string" },
+                        "operator": "eq",
+                        "rightOperand": { "@value": "a0fbc6eb-bc0d-4489-b581-f102107c86fd", "@type": "xsd:string" }
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+
 ### POST 1 request with a header
 POST http://localhost:8000/api/policy/
 Accept: application/ld+json
@@ -19,7 +49,7 @@ Body:
                     {
                         "leftOperand": { "@value": "{{face_uuid}}" , "@type": "xsd:string" },
                         "operator": "eq",
-                        "rightOperand": { "@value": "f7bc80a8-a2bc-4fb3-9caf-4e65ebe3c89a", "@type": "xsd:string" }
+                        "rightOperand": { "@value": "03cdfe31-f81c-40b8-b30a-b273c54dd26c", "@type": "xsd:string" }
                     }
                 ]
             }
@@ -90,25 +120,26 @@ Body:
 
 {
     "odrl_policy": {
-    "@context": "http://www.w3.org/ns/odrl.jsonld",
+    "@context": ["http://www.w3.org/ns/odrl.jsonld",{"time":"https://w3id.org/def/odre-time#"}],
     "@type": "Offer",
-    "uid": "http://example.com/policy:5",
-    "profile": "https://helio.auroral.linkeddata.es/jcano",
+    "uid": "http://example.com/policy:5000",
+    "profile": "https://example.com/user/12345",
     "permission": [{
-       "target": "https://helio.auroral.linkeddata.es/api/luminosity/data",
+       "target": "https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence",
        "action": "read",
        "constraint": [{
-           "leftOperand": { "@value": "{{status('switch', 'https://helio.auroral.linkeddata.es/policy/5')}}" , "@type": "xsd:string" },
-           "operator": "eq",
-           "rightOperand":  { "@value": "On", "@type": "xsd:string" }
+           "leftOperand": "time:time",
+           "operator": "lteq",
+           "rightOperand":  { "@value": "23:59:00", "@type": "xsd:time" }
        }]
    }]
-  }
 }
 
 
+}
+
 ### GET request with parameter
-GET http://localhost:8000/api/policy/3331
+GET http://localhost:8000/api/policy/5000
 Accept: application/ld+json
 
 ### GET request with a header
@@ -120,7 +151,7 @@ DELETE http://localhost:8000/api/policy/3331
 Accept: application/ld+json
 
 ### GET request for evaluate
-GET http://localhost:8000/api/policy/evaluate/3331?key=face_recognition&id=3331?face_uuid=cd42c43d-18c4-445f-b5a6-814bc29cb505
+GET http://localhost:8000/api/policy/evaluate/5000
 Accept: application/ld+json
 
 ### GET request for evaluate
@@ -135,29 +166,19 @@ Body:
 
 {
     "odrl_policy": {
-    "@context": "http://www.w3.org/ns/odrl.jsonld",
+    "@context": ["http://www.w3.org/ns/odrl.jsonld",{"time":"https://w3id.org/def/odre-time#"}],
     "@type": "Offer",
-    "uid": "http://example.com/policy/6165",
-    "profile": "http://example.com/odrl/profile/10",
-    "permission": [
-        {
-            "target": "http://example.com/document/1234",
-            "assigner": "http://example.com/org/616",
-            "action": { "@id": "http://example.com/odrl/action/distribute_document" },
-            "constraint": [
-                {
-                    "leftOperand": { "@id": "http://example.com/odrl/property/recognized_face_uri" },
-                    "operator": { "@id": "http://www.w3.org/ns/odrl/2/eq" },
-                    "rightOperand": { "@id": "http://example.com/faces/database_query" }
-                },
-                {
-                    "leftOperand": { "@id": "http://example.com/odrl/property/token" },
-                    "operator": { "@id": "http://www.w3.org/ns/odrl/2/eq" },
-                    "rightOperand": { "@value": "{{request.token}}", "@type": "xsd:string" }
-                }
-            ]
-        }
-    ]
+    "uid": "https://helio.auroral.linkeddata.es/policy/3",
+    "profile": "https://example.com/user/12345",
+    "permission": [{
+       "target": "https://www.w3.org/TR/2018/REC-odrl-model-20180215/",
+       "action": "read",
+       "constraint": [{
+           "leftOperand": "time:time",
+           "operator": "lteq",
+           "rightOperand":  { "@value": "23:59:00", "@type": "xsd:time" }
+       }]
+   }]
 }
 
 
