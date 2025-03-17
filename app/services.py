@@ -44,9 +44,9 @@ def save_evaluation_log(evaluation_log):
 def check_content(request):
     if "Accept" in request.headers:
         response_format = request.headers["Accept"]
-        if response_format != "application/ld+json":
+        if response_format != "application/ld+json" or response_format != "application/json":
             raise HTTPException(status_code=400, detail="Unsupported MIME type, only supported application/ld+json")
     if "Content-Type" in request.headers:
         request_format = request.headers["Content-Type"]
-        if request_format != "application/ld+json":
+        if request_format != "application/ld+json" or request_format != "application/json":
             raise HTTPException(status_code=400, detail="Unsupported MIME type, only supported application/ld+json")
