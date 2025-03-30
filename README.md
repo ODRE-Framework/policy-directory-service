@@ -1,3 +1,7 @@
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
+
 # Police Directory API
 
 The **Police Directory API** is a FastAPI-based system for managing and querying **privacy policies** using an **RDF model**. It facilitates the creation, storage, and retrieval of access control policies based on the **ODRL** (Open Digital Rights Language) standard.
