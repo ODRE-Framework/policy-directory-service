@@ -1,4 +1,10 @@
-```markdown
+## License
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
+This project is licensed under the [Apache License 2.0](LICENSE).
+
+
 # Police Directory API
 
 The **Police Directory API** is a FastAPI-based system for managing and querying **privacy policies** using an **RDF model**. It facilitates the creation, storage, and retrieval of access control policies based on the **ODRL** (Open Digital Rights Language) standard.
@@ -16,6 +22,48 @@ A [demo service](https://odrldirectory.linkeddata.es/) is available to test the 
 - **JSON-LD and Turtle Support**: Accepts **JSON-LD** input and stores policies in **Turtle** format.
 - **Token-Based Authorization**: Secure API endpoints with authentication tokens.
 - **Integration with RDF Graphs**: Uses `rdflib` for policy storage and querying.
+
+---
+
+## **Running with Docker**
+
+### **1️⃣ Docker Compose Deployment**
+
+Copy the following **`docker-compose.yml`** file and run:
+
+```bash
+docker-compose up
+
+```
+
+```yaml
+version: '3.0'
+services:
+  directory:
+    container_name: odre-pds
+    image: acimmino/odre-pds:latest
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+
+```
+
+### **2️⃣ Manual Docker Deployment**
+
+1. **Build the Docker Image**:
+    
+    ```bash
+    docker build -t police-directory-api .
+    
+    ```
+    
+2. **Run the Container**:
+    
+    ```bash
+    docker run -p 8000:8000 police-directory-api
+    
+    ```
+    
 
 ---
 
@@ -128,44 +176,7 @@ Content-Type: application/json
 
 ---
 
-## **Running with Docker**
 
-### **1️⃣ Docker Compose Deployment**
-
-Copy the following **`docker-compose.yml`** file and run:
-
-```bash
-docker-compose up
-
-```
-
-```yaml
-services:
-  policy-directory-service:
-    image: acimmino/odre-pds:latest
-    ports:
-      - "8000:8000"
-
-```
-
-### **2️⃣ Manual Docker Deployment**
-
-1. **Build the Docker Image**:
-    
-    ```bash
-    docker build -t police-directory-api .
-    
-    ```
-    
-2. **Run the Container**:
-    
-    ```bash
-    docker run -p 8000:8000 police-directory-api
-    
-    ```
-    
-
----
 
 ## **Contributions**
 

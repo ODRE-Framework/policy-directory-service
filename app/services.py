@@ -45,13 +45,14 @@ def save_evaluation_log(evaluation_log):
 
 
 def check_content(request):
+    print("new version: 1.0")
     if "Accept" in request.headers:
         response_format = request.headers["Accept"]
-        if response_format != "application/ld+json":
+        if response_format != "application/ld+json" and response_format != "application/json":
             raise HTTPException(status_code=400, detail="Unsupported MIME type, only supported application/ld+json")
     if "Content-Type" in request.headers:
         request_format = request.headers["Content-Type"]
-        if request_format != "application/ld+json":
+        if request_format != "application/ld+json" and request_format != "application/json":
             raise HTTPException(status_code=400, detail="Unsupported MIME type, only supported application/ld+json")
 
 def validate_policy(data_graph: Graph):
