@@ -1,0 +1,687 @@
+@prefix ns1: <https://w3id.org/def/astrea#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://astrea.linkeddata.es/report> a ns1:ShapeReport ;
+    ns1:contains <https://astrea.linkeddata.es/shapes#03359ab6b2496e238ae6162b2a2abe18>,
+        <https://astrea.linkeddata.es/shapes#05b656d1029790d387281edbee126494>,
+        <https://astrea.linkeddata.es/shapes#0b1e058a7f356bf4ffeaad65f05cf360>,
+        <https://astrea.linkeddata.es/shapes#0bcf60690c847c8a7562b8f6739e8a2f>,
+        <https://astrea.linkeddata.es/shapes#0f39adbf303cacd13f307f4d117d97f0>,
+        <https://astrea.linkeddata.es/shapes#1084d403ca5548947614092d63746faa>,
+        <https://astrea.linkeddata.es/shapes#1395b21642fcc95255ea28aad82c4294>,
+        <https://astrea.linkeddata.es/shapes#1603b449fef6f5d8892d9ae530b93325>,
+        <https://astrea.linkeddata.es/shapes#1cc4fd03f98ba8fa966293439399d766>,
+        <https://astrea.linkeddata.es/shapes#1d7a481cc8c9c36158e099771351ae28>,
+        <https://astrea.linkeddata.es/shapes#207efe24d202336391ac49ec88e05313>,
+        <https://astrea.linkeddata.es/shapes#212bd74415b5736e7081d8dcf832b7d6>,
+        <https://astrea.linkeddata.es/shapes#214dad279099fe939bfc9690bedbeacd>,
+        <https://astrea.linkeddata.es/shapes#220ff3cb915b0506030a475c5bb50549>,
+        <https://astrea.linkeddata.es/shapes#22a181f3164f2fc4d3d32483949b3fe7>,
+        <https://astrea.linkeddata.es/shapes#23ea736c57647e267bbd78cdc79bd353>,
+        <https://astrea.linkeddata.es/shapes#2712d1426344951d9429ef9368dc7126>,
+        <https://astrea.linkeddata.es/shapes#29c2a003c089a1094b053dc167e31c98>,
+        <https://astrea.linkeddata.es/shapes#2b475e4614ba0d2cc3a17d2c246c1379>,
+        <https://astrea.linkeddata.es/shapes#2d2e76b9974c149589dbb215b61e8452>,
+        <https://astrea.linkeddata.es/shapes#2d50f6b93dde37941b94508a27a352af>,
+        <https://astrea.linkeddata.es/shapes#305d1d49ec84467a208222256bfa712c>,
+        <https://astrea.linkeddata.es/shapes#3116840effa76c6239bda4e1bd84da9a>,
+        <https://astrea.linkeddata.es/shapes#31a8db028d771ffb2fc1d09a17596b52>,
+        <https://astrea.linkeddata.es/shapes#32c1ae8cc2d2a534921e600141252044>,
+        <https://astrea.linkeddata.es/shapes#33d9d38ba84211abccbb45703dc12165>,
+        <https://astrea.linkeddata.es/shapes#34eb8a657bec5830b73d1fc629eda09e>,
+        <https://astrea.linkeddata.es/shapes#39a65112dc5162f7fb0ced0e2f877a3f>,
+        <https://astrea.linkeddata.es/shapes#3e7645edffcef18b1596a7f00ee38b0f>,
+        <https://astrea.linkeddata.es/shapes#3ed0db774cf3d2c2feb7c48d81c8c139>,
+        <https://astrea.linkeddata.es/shapes#45bb4dbdeb549fdf7287347879c6b543>,
+        <https://astrea.linkeddata.es/shapes#4856807f9b05cbecad6c0f9d641ed751>,
+        <https://astrea.linkeddata.es/shapes#52a2fd93f25a2ce20611ed02f63f66e9>,
+        <https://astrea.linkeddata.es/shapes#5a73bc6dcec6246948811ff4a95717de>,
+        <https://astrea.linkeddata.es/shapes#6243a8aa878de14e742ec1dd54e17713>,
+        <https://astrea.linkeddata.es/shapes#65e3572a58337a996b36fb39e2602808>,
+        <https://astrea.linkeddata.es/shapes#675dd9acc56478b0696703351067a7b0>,
+        <https://astrea.linkeddata.es/shapes#6da91246d18f13f0f0f3aacb1a08e631>,
+        <https://astrea.linkeddata.es/shapes#73364f473e9282b8e22319be3905e769>,
+        <https://astrea.linkeddata.es/shapes#77ca472037a48a134683d419d2e1aadb>,
+        <https://astrea.linkeddata.es/shapes#7972456f67a353b2181e00d548e539db>,
+        <https://astrea.linkeddata.es/shapes#7a66db5fc12981497877bcf1c1f56f7d>,
+        <https://astrea.linkeddata.es/shapes#811d474a3cb2b3f92b0cd9439e19d636>,
+        <https://astrea.linkeddata.es/shapes#871aeaeeb2635cbbacf795fe89e586bd>,
+        <https://astrea.linkeddata.es/shapes#87d7a1586e78ed925101e26d724e244b>,
+        <https://astrea.linkeddata.es/shapes#8a7dfd6432f1f65c4e813b1510f20b42>,
+        <https://astrea.linkeddata.es/shapes#8abaca354655e79c53220d78c5f8794b>,
+        <https://astrea.linkeddata.es/shapes#8bda9e6263caaf1abb0c731493d19b3b>,
+        <https://astrea.linkeddata.es/shapes#909e395519778fb993626b53439caa9a>,
+        <https://astrea.linkeddata.es/shapes#93bed3bf8e669c3a940d5c0607594114>,
+        <https://astrea.linkeddata.es/shapes#983af0338f0eb5a052dab9f6fb3eb66f>,
+        <https://astrea.linkeddata.es/shapes#98580b1ff69e100a6e2fb23bc352c74f>,
+        <https://astrea.linkeddata.es/shapes#9d6d9ab499168c077df3e021d8bbbae9>,
+        <https://astrea.linkeddata.es/shapes#a9116c9ba83b2fe79470edc937e2ea45>,
+        <https://astrea.linkeddata.es/shapes#aef1a78016b3598e01dd7671934b50b4>,
+        <https://astrea.linkeddata.es/shapes#b0816bc4565ebf22b56addf088ad9e22>,
+        <https://astrea.linkeddata.es/shapes#b157d1b158e0dd5a11ee1c90b0dd1df2>,
+        <https://astrea.linkeddata.es/shapes#b1a574010fcec130cfeceb9e6bff7b48>,
+        <https://astrea.linkeddata.es/shapes#b7864a14eeddeb27a24d519f79d0c7b4>,
+        <https://astrea.linkeddata.es/shapes#b88980af5a440a1ac83760b6600307b6>,
+        <https://astrea.linkeddata.es/shapes#bc75414ec0d945cfe5dbea6dc17bd655>,
+        <https://astrea.linkeddata.es/shapes#bd4e04bad891786dc24daf1540d6d24b>,
+        <https://astrea.linkeddata.es/shapes#c171a4d1b4db29c93450acdf7d07b71e>,
+        <https://astrea.linkeddata.es/shapes#c2c6c31a46eabf1864f27370011f8527>,
+        <https://astrea.linkeddata.es/shapes#c333d1030fc4988441bea531a91b6145>,
+        <https://astrea.linkeddata.es/shapes#c55a6e0b5bfe9d04b6efeb14400a1441>,
+        <https://astrea.linkeddata.es/shapes#ccda8e59fc2e5cc76f11ccfdf5652f88>,
+        <https://astrea.linkeddata.es/shapes#d25636b723278b7eb982a43bdfd44199>,
+        <https://astrea.linkeddata.es/shapes#d5e1140e8446e34d65600ae8c135af6a>,
+        <https://astrea.linkeddata.es/shapes#d99c8d17229afe7dee610c521462cdc1>,
+        <https://astrea.linkeddata.es/shapes#da986faeb9bd844d7c600f14473db5b7>,
+        <https://astrea.linkeddata.es/shapes#de1154a89cf41be4294f49e020f70490>,
+        <https://astrea.linkeddata.es/shapes#dfde5bb2b3ec5d6c60aefd63d783164e>,
+        <https://astrea.linkeddata.es/shapes#e25890f36faa3d72c811cfc0a86f6e3b>,
+        <https://astrea.linkeddata.es/shapes#e2d8fb7d22cc855c4cf479409c6dc2b0>,
+        <https://astrea.linkeddata.es/shapes#e40060273ac92dd5178441148384d13d>,
+        <https://astrea.linkeddata.es/shapes#e646519509928a04098eca1a015e34eb>,
+        <https://astrea.linkeddata.es/shapes#e686ae254686853eade3cea9abe0eb95>,
+        <https://astrea.linkeddata.es/shapes#ea556b188baca437132717205370ebce>,
+        <https://astrea.linkeddata.es/shapes#eed79fac5e674e0851bfda55425cab3a>,
+        <https://astrea.linkeddata.es/shapes#f06d295fb51fd219b787cf9e25541d6d>,
+        <https://astrea.linkeddata.es/shapes#f08267714c71afeb5996b810e399e57a>,
+        <https://astrea.linkeddata.es/shapes#f1a4974c9d12c93e3d73dba9ec0fc507>,
+        <https://astrea.linkeddata.es/shapes#f52c9965f48b84288c22661a0b7c7159>,
+        <https://astrea.linkeddata.es/shapes#f652e06df9a41a5439bb84b24b2fdfa6>,
+        <https://astrea.linkeddata.es/shapes#fc81b2b4bc3f67de8ba11656cf457406>,
+        <https://astrea.linkeddata.es/shapes#fef4be6cdbd9759370dd37d43f4e91fe>,
+        <https://astrea.linkeddata.es/shapes#ffeaf0d3664c31215f614a64f5bb45a5> ;
+    ns1:generatedShapesFrom <https://astrea.linkeddata.es/report/0804863721> .
+
+<https://astrea.linkeddata.es/report/0804863721> a ns1:ReportEntry ;
+    ns1:message "Shapes generated with no errors" ;
+    ns1:source "https://www.w3.org/ns/odrl/2/ODRL22.ttl" ;
+    ns1:statusCode "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#0bcf60690c847c8a7562b8f6739e8a2f> a sh:NodeShape ;
+    rdfs:label "Set"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Set"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Set .
+
+<https://astrea.linkeddata.es/shapes#0f39adbf303cacd13f307f4d117d97f0> a sh:PropertyShape ;
+    rdfs:label "Contracting Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Contracting Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:contractingParty .
+
+<https://astrea.linkeddata.es/shapes#1084d403ca5548947614092d63746faa> a sh:NodeShape ;
+    rdfs:label "Party Collection"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Party Collection"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:PartyCollection .
+
+<https://astrea.linkeddata.es/shapes#1603b449fef6f5d8892d9ae530b93325> a sh:NodeShape ;
+    rdfs:label "Asset"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Asset"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#dfde5bb2b3ec5d6c60aefd63d783164e> ;
+    sh:targetClass odrl:Asset .
+
+<https://astrea.linkeddata.es/shapes#220ff3cb915b0506030a475c5bb50549> a sh:NodeShape ;
+    rdfs:label "Assertion"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Assertion"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Assertion .
+
+<https://astrea.linkeddata.es/shapes#22a181f3164f2fc4d3d32483949b3fe7> a sh:NodeShape ;
+    rdfs:label "Action"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Action"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#214dad279099fe939bfc9690bedbeacd>,
+        <https://astrea.linkeddata.es/shapes#52a2fd93f25a2ce20611ed02f63f66e9> ;
+    sh:targetClass odrl:Action .
+
+<https://astrea.linkeddata.es/shapes#23ea736c57647e267bbd78cdc79bd353> a sh:NodeShape ;
+    rdfs:label "Undefined Term"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Undefined Term"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:UndefinedTerm .
+
+<https://astrea.linkeddata.es/shapes#2d2e76b9974c149589dbb215b61e8452> a sh:PropertyShape ;
+    rdfs:label "Tracked Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Tracked Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:trackedParty .
+
+<https://astrea.linkeddata.es/shapes#305d1d49ec84467a208222256bfa712c> a sh:PropertyShape ;
+    rdfs:label "Scope"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Scope"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:scope .
+
+<https://astrea.linkeddata.es/shapes#31a8db028d771ffb2fc1d09a17596b52> a sh:NodeShape ;
+    rdfs:label "Asset Collection"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Asset Collection"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:AssetCollection .
+
+<https://astrea.linkeddata.es/shapes#34eb8a657bec5830b73d1fc629eda09e> a sh:NodeShape ;
+    rdfs:label "Prohibition"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Prohibition"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#3ed0db774cf3d2c2feb7c48d81c8c139> ;
+    sh:targetClass odrl:Prohibition .
+
+<https://astrea.linkeddata.es/shapes#39a65112dc5162f7fb0ced0e2f877a3f> a sh:PropertyShape ;
+    rdfs:label "Has Right Operand"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Has Right Operand"@en ;
+    sh:nodeKind sh:Literal ;
+    sh:path odrl:rightOperand .
+
+<https://astrea.linkeddata.es/shapes#3e7645edffcef18b1596a7f00ee38b0f> a sh:PropertyShape ;
+    rdfs:label "Consenting Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Consenting Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:consentingParty .
+
+<https://astrea.linkeddata.es/shapes#45bb4dbdeb549fdf7287347879c6b543> a sh:PropertyShape ;
+    rdfs:label "Informing Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Informing Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:informingParty .
+
+<https://astrea.linkeddata.es/shapes#4856807f9b05cbecad6c0f9d641ed751> a sh:PropertyShape ;
+    rdfs:label "Compensated Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Compensated Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:compensatedParty .
+
+<https://astrea.linkeddata.es/shapes#5a73bc6dcec6246948811ff4a95717de> a sh:PropertyShape ;
+    rdfs:label "Consented Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Consented Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:consentedParty .
+
+<https://astrea.linkeddata.es/shapes#6243a8aa878de14e742ec1dd54e17713> a sh:NodeShape ;
+    rdfs:label "Policy"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Policy"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#1d7a481cc8c9c36158e099771351ae28>,
+        <https://astrea.linkeddata.es/shapes#212bd74415b5736e7081d8dcf832b7d6>,
+        <https://astrea.linkeddata.es/shapes#29c2a003c089a1094b053dc167e31c98>,
+        <https://astrea.linkeddata.es/shapes#2b475e4614ba0d2cc3a17d2c246c1379>,
+        <https://astrea.linkeddata.es/shapes#32c1ae8cc2d2a534921e600141252044>,
+        <https://astrea.linkeddata.es/shapes#33d9d38ba84211abccbb45703dc12165>,
+        <https://astrea.linkeddata.es/shapes#7a66db5fc12981497877bcf1c1f56f7d>,
+        <https://astrea.linkeddata.es/shapes#bc75414ec0d945cfe5dbea6dc17bd655>,
+        <https://astrea.linkeddata.es/shapes#c2c6c31a46eabf1864f27370011f8527>,
+        <https://astrea.linkeddata.es/shapes#d5e1140e8446e34d65600ae8c135af6a>,
+        <https://astrea.linkeddata.es/shapes#ea556b188baca437132717205370ebce> ;
+    sh:targetClass odrl:Policy .
+
+<https://astrea.linkeddata.es/shapes#65e3572a58337a996b36fb39e2602808> a sh:PropertyShape ;
+    rdfs:label "Compensating Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Compensating Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:compensatingParty .
+
+<https://astrea.linkeddata.es/shapes#675dd9acc56478b0696703351067a7b0> a sh:PropertyShape ;
+    rdfs:label "And"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "And"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:and .
+
+<https://astrea.linkeddata.es/shapes#6da91246d18f13f0f0f3aacb1a08e631> a sh:NodeShape ;
+    rdfs:label "Left Operand"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Left Operand"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:LeftOperand .
+
+<https://astrea.linkeddata.es/shapes#73364f473e9282b8e22319be3905e769> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass skos:Collection .
+
+<https://astrea.linkeddata.es/shapes#811d474a3cb2b3f92b0cd9439e19d636> a sh:NodeShape ;
+    rdfs:label "Duty"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Duty"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#2d50f6b93dde37941b94508a27a352af> ;
+    sh:targetClass odrl:Duty .
+
+<https://astrea.linkeddata.es/shapes#871aeaeeb2635cbbacf795fe89e586bd> a sh:PropertyShape ;
+    rdfs:label "Only One"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Only One"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:xone .
+
+<https://astrea.linkeddata.es/shapes#87d7a1586e78ed925101e26d724e244b> a sh:NodeShape ;
+    rdfs:label "Logical Constraint"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Logical Constraint"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:LogicalConstraint .
+
+<https://astrea.linkeddata.es/shapes#8bda9e6263caaf1abb0c731493d19b3b> a sh:NodeShape ;
+    rdfs:label "Ticket"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Ticket"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Ticket .
+
+<https://astrea.linkeddata.es/shapes#909e395519778fb993626b53439caa9a> a sh:NodeShape ;
+    rdfs:label "Operator"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Operator"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Operator .
+
+<https://astrea.linkeddata.es/shapes#983af0338f0eb5a052dab9f6fb3eb66f> a sh:NodeShape ;
+    rdfs:label "Conflict Strategy Preference"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Conflict Strategy Preference"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:ConflictTerm .
+
+<https://astrea.linkeddata.es/shapes#9d6d9ab499168c077df3e021d8bbbae9> a sh:PropertyShape ;
+    rdfs:label "Tracking Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Tracking Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:trackingParty .
+
+<https://astrea.linkeddata.es/shapes#a9116c9ba83b2fe79470edc937e2ea45> a sh:NodeShape ;
+    rdfs:label "Agreement"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Agreement"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Agreement .
+
+<https://astrea.linkeddata.es/shapes#aef1a78016b3598e01dd7671934b50b4> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass skos:ConceptScheme .
+
+<https://astrea.linkeddata.es/shapes#b0816bc4565ebf22b56addf088ad9e22> a sh:PropertyShape ;
+    rdfs:label "Inherit Relation"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Inherit Relation"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:inheritRelation .
+
+<https://astrea.linkeddata.es/shapes#b157d1b158e0dd5a11ee1c90b0dd1df2> a sh:NodeShape ;
+    rdfs:label "Party Scope"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Party Scope"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:PartyScope .
+
+<https://astrea.linkeddata.es/shapes#b1a574010fcec130cfeceb9e6bff7b48> a sh:PropertyShape ;
+    rdfs:label "Handle Undefined Term"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:UndefinedTerm ;
+    sh:name "Handle Undefined Term"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:undefined .
+
+<https://astrea.linkeddata.es/shapes#b88980af5a440a1ac83760b6600307b6> a sh:PropertyShape ;
+    rdfs:label "Inheritance Allowed"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Inheritance Allowed"@en ;
+    sh:nodeKind sh:Literal ;
+    sh:path odrl:inheritAllowed .
+
+<https://astrea.linkeddata.es/shapes#bd4e04bad891786dc24daf1540d6d24b> a sh:PropertyShape ;
+    rdfs:label "Or"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Or"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:or .
+
+<https://astrea.linkeddata.es/shapes#c171a4d1b4db29c93450acdf7d07b71e> a sh:NodeShape ;
+    rdfs:label "Offer"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Offer"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Offer .
+
+<https://astrea.linkeddata.es/shapes#c333d1030fc4988441bea531a91b6145> a sh:PropertyShape ;
+    rdfs:label "Contracted Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Contracted Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:contractedParty .
+
+<https://astrea.linkeddata.es/shapes#ccda8e59fc2e5cc76f11ccfdf5652f88> a sh:NodeShape ;
+    rdfs:label "Rule"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Rule"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#1cc4fd03f98ba8fa966293439399d766>,
+        <https://astrea.linkeddata.es/shapes#1d7a481cc8c9c36158e099771351ae28>,
+        <https://astrea.linkeddata.es/shapes#2b475e4614ba0d2cc3a17d2c246c1379>,
+        <https://astrea.linkeddata.es/shapes#32c1ae8cc2d2a534921e600141252044>,
+        <https://astrea.linkeddata.es/shapes#33d9d38ba84211abccbb45703dc12165>,
+        <https://astrea.linkeddata.es/shapes#7a66db5fc12981497877bcf1c1f56f7d>,
+        <https://astrea.linkeddata.es/shapes#8a7dfd6432f1f65c4e813b1510f20b42>,
+        <https://astrea.linkeddata.es/shapes#c2c6c31a46eabf1864f27370011f8527> ;
+    sh:targetClass odrl:Rule .
+
+<https://astrea.linkeddata.es/shapes#d25636b723278b7eb982a43bdfd44199> a sh:PropertyShape ;
+    rdfs:label "Informed Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Informed Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:informedParty .
+
+<https://astrea.linkeddata.es/shapes#d99c8d17229afe7dee610c521462cdc1> a sh:PropertyShape ;
+    rdfs:label "Attributed Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Attributed Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:attributedParty .
+
+<https://astrea.linkeddata.es/shapes#de1154a89cf41be4294f49e020f70490> a sh:PropertyShape ;
+    rdfs:label "Timed Count"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:datatype rdfs:Literal ;
+    sh:name "Timed Count"@en ;
+    sh:nodeKind sh:Literal ;
+    sh:path odrl:timedCount .
+
+<https://astrea.linkeddata.es/shapes#e2d8fb7d22cc855c4cf479409c6dc2b0> a sh:NodeShape ;
+    rdfs:label "Privacy Policy"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Privacy Policy"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Privacy .
+
+<https://astrea.linkeddata.es/shapes#e40060273ac92dd5178441148384d13d> a sh:NodeShape ;
+    rdfs:label "Permission"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Permission"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#7972456f67a353b2181e00d548e539db> ;
+    sh:targetClass odrl:Permission .
+
+<https://astrea.linkeddata.es/shapes#e686ae254686853eade3cea9abe0eb95> a sh:PropertyShape ;
+    rdfs:label "Attributing Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Attributing Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:attributingParty .
+
+<https://astrea.linkeddata.es/shapes#eed79fac5e674e0851bfda55425cab3a> a sh:NodeShape ;
+    rdfs:label "Right Operand"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Right Operand"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:RightOperand .
+
+<https://astrea.linkeddata.es/shapes#f06d295fb51fd219b787cf9e25541d6d> a sh:PropertyShape ;
+    rdfs:label "proximity"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "proximity"@en ;
+    sh:nodeKind sh:Literal ;
+    sh:path odrl:proximity .
+
+<https://astrea.linkeddata.es/shapes#f08267714c71afeb5996b810e399e57a> a sh:NodeShape ;
+    rdfs:label "Asset Scope"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Asset Scope"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:AssetScope .
+
+<https://astrea.linkeddata.es/shapes#f1a4974c9d12c93e3d73dba9ec0fc507> a sh:NodeShape ;
+    rdfs:label "Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Party"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#207efe24d202336391ac49ec88e05313>,
+        <https://astrea.linkeddata.es/shapes#77ca472037a48a134683d419d2e1aadb> ;
+    sh:targetClass odrl:Party .
+
+<https://astrea.linkeddata.es/shapes#f52c9965f48b84288c22661a0b7c7159> a sh:PropertyShape ;
+    rdfs:label "Payee Party"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Payee Party"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:payeeParty .
+
+<https://astrea.linkeddata.es/shapes#f652e06df9a41a5439bb84b24b2fdfa6> a sh:PropertyShape ;
+    rdfs:label "And Sequence"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "And Sequence"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:andSequence .
+
+<https://astrea.linkeddata.es/shapes#fc81b2b4bc3f67de8ba11656cf457406> a sh:NodeShape ;
+    rdfs:label "Constraint"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Constraint"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:property <https://astrea.linkeddata.es/shapes#da986faeb9bd844d7c600f14473db5b7> ;
+    sh:targetClass odrl:Constraint .
+
+<https://astrea.linkeddata.es/shapes#fef4be6cdbd9759370dd37d43f4e91fe> a sh:NodeShape ;
+    rdfs:label "Request"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:name "Request"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass odrl:Request .
+
+<https://astrea.linkeddata.es/shapes#ffeaf0d3664c31215f614a64f5bb45a5> a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:targetClass skos:Concept .
+
+<https://astrea.linkeddata.es/shapes#1cc4fd03f98ba8fa966293439399d766> a sh:PropertyShape ;
+    rdfs:label "Output"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Asset ;
+    sh:name "Output"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:output .
+
+<https://astrea.linkeddata.es/shapes#207efe24d202336391ac49ec88e05313> a sh:PropertyShape ;
+    rdfs:label "Assigner Of"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Policy ;
+    sh:name "Assigner Of"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:assignerOf .
+
+<https://astrea.linkeddata.es/shapes#212bd74415b5736e7081d8dcf832b7d6> a sh:PropertyShape ;
+    rdfs:label "Handle Policy Conflicts"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:ConflictTerm ;
+    sh:name "Handle Policy Conflicts"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:conflict .
+
+<https://astrea.linkeddata.es/shapes#214dad279099fe939bfc9690bedbeacd> a sh:PropertyShape ;
+    rdfs:label "Included In"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Action ;
+    sh:name "Included In"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:includedIn .
+
+<https://astrea.linkeddata.es/shapes#29c2a003c089a1094b053dc167e31c98> a sh:PropertyShape ;
+    rdfs:label "Inherits From"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Policy ;
+    sh:name "Inherits From"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:inheritFrom .
+
+<https://astrea.linkeddata.es/shapes#2d50f6b93dde37941b94508a27a352af> a sh:PropertyShape ;
+    rdfs:label "Consequence"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Duty ;
+    sh:name "Consequence"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:consequence .
+
+<https://astrea.linkeddata.es/shapes#3ed0db774cf3d2c2feb7c48d81c8c139> a sh:PropertyShape ;
+    rdfs:label "Remedy"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Duty ;
+    sh:name "Remedy"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:remedy .
+
+<https://astrea.linkeddata.es/shapes#52a2fd93f25a2ce20611ed02f63f66e9> a sh:PropertyShape ;
+    rdfs:label "Implies"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Action ;
+    sh:name "Implies"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:implies .
+
+<https://astrea.linkeddata.es/shapes#77ca472037a48a134683d419d2e1aadb> a sh:PropertyShape ;
+    rdfs:label "Assignee Of"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Policy ;
+    sh:name "Assignee Of"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:assigneeOf .
+
+<https://astrea.linkeddata.es/shapes#7972456f67a353b2181e00d548e539db> a sh:PropertyShape ;
+    rdfs:label "Has Duty"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Duty ;
+    sh:name "Has Duty"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:duty .
+
+<https://astrea.linkeddata.es/shapes#8a7dfd6432f1f65c4e813b1510f20b42> a sh:PropertyShape ;
+    rdfs:label "Failure"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Rule ;
+    sh:name "Failure"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:failure .
+
+<https://astrea.linkeddata.es/shapes#bc75414ec0d945cfe5dbea6dc17bd655> a sh:PropertyShape ;
+    rdfs:label "Obligation"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Duty ;
+    sh:name "Obligation"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:obligation .
+
+<https://astrea.linkeddata.es/shapes#d5e1140e8446e34d65600ae8c135af6a> a sh:PropertyShape ;
+    rdfs:label "Has Permission"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Permission ;
+    sh:name "Has Permission"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:permission .
+
+<https://astrea.linkeddata.es/shapes#da986faeb9bd844d7c600f14473db5b7> a sh:PropertyShape ;
+    rdfs:label "Has Operator"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Operator ;
+    sh:name "Has Operator"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:operator .
+
+<https://astrea.linkeddata.es/shapes#dfde5bb2b3ec5d6c60aefd63d783164e> a sh:PropertyShape ;
+    rdfs:label "Target Policy"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Policy ;
+    sh:name "Target Policy"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:hasPolicy .
+
+<https://astrea.linkeddata.es/shapes#ea556b188baca437132717205370ebce> a sh:PropertyShape ;
+    rdfs:label "Has Prohibition"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Prohibition ;
+    sh:name "Has Prohibition"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:prohibition .
+
+<https://astrea.linkeddata.es/shapes#1d7a481cc8c9c36158e099771351ae28> a sh:PropertyShape ;
+    rdfs:label "Function"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Party ;
+    sh:name "Function"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:function .
+
+<https://astrea.linkeddata.es/shapes#2b475e4614ba0d2cc3a17d2c246c1379> a sh:PropertyShape ;
+    rdfs:label "Assignee"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Party ;
+    sh:name "Assignee"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:assignee .
+
+<https://astrea.linkeddata.es/shapes#32c1ae8cc2d2a534921e600141252044> a sh:PropertyShape ;
+    rdfs:label "Relation"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Asset ;
+    sh:name "Relation"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:relation .
+
+<https://astrea.linkeddata.es/shapes#33d9d38ba84211abccbb45703dc12165> a sh:PropertyShape ;
+    rdfs:label "Assigner"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Party ;
+    sh:name "Assigner"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:assigner .
+
+<https://astrea.linkeddata.es/shapes#7a66db5fc12981497877bcf1c1f56f7d> a sh:PropertyShape ;
+    rdfs:label "Target"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Asset ;
+    sh:name "Target"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:target .
+
+<https://astrea.linkeddata.es/shapes#c2c6c31a46eabf1864f27370011f8527> a sh:PropertyShape ;
+    rdfs:label "Has Action"@en ;
+    rdfs:isDefinedBy odrl: ;
+    sh:class odrl:Action ;
+    sh:name "Has Action"@en ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path odrl:action .
+
+[] rdf:first [ sh:class odrl:AssetCollection ;
+            sh:path odrl:partOf ] ;
+    rdf:rest ( [ sh:class odrl:PartyCollection ;
+                sh:path odrl:partOf ] ) .
+
+[] rdf:first [ sh:class odrl:Constraint ;
+            sh:path odrl:constraint ] ;
+    rdf:rest ( [ sh:class odrl:LogicalConstraint ;
+                sh:path odrl:constraint ] ) .
+
+[] rdf:first [ sh:class odrl:Constraint ;
+            sh:path odrl:refinement ] ;
+    rdf:rest ( [ sh:class odrl:LogicalConstraint ;
+                sh:path odrl:refinement ] ) .
+

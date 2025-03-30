@@ -7,7 +7,7 @@ import re
 import httpx
 import traceback
 from fastapi.middleware.cors import CORSMiddleware
-from services import *
+from app.services import *
 
 # from pydantic import BaseSettings
 #
@@ -46,6 +46,13 @@ def custom_openapi():
                 path[method]["requestBody"]["content"] = {
                     "application/ld+json": path[method]["requestBody"]["content"]["application/json"]
                 }
+    for path in openapi_schema["paths"].values():
+        for method in path:
+            if "responses" in path[method]:
+                for status_code in path[method]["responses"]:
+                    content = path[method]["responses"][status_code].get("content")
+                    if content and "application/json" in content:
+                        content["application/ld+json"] = content.pop("application/json")
 
     app.openapi_schema = openapi_schema
     return app.openapi_schema
@@ -169,7 +176,11 @@ async def evaluate_policy_id(id: str, request: Request):
         odre = ODRE()
 
         evaluation_result = odre.enforce(policy=json.dumps(policy), interpolations=interpolations)
-
+        evaluation_log = {
+            "parameters": dict(request.query_params),
+            "evaluation_result": evaluation_result
+        }
+        save_evaluation_log(evaluation_log)
         if evaluation_result:
             document_url = policy["permission"][0]["target"]
             print(document_url)
