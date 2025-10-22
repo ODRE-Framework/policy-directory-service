@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, Body, Request, Response, Header
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
+from fastapi.openapi.utils import get_openapi
 import secrets
 from pydantic import BaseModel
 from pyodre.odre import ODRE
@@ -8,25 +9,12 @@ import httpx
 import traceback
 from fastapi.middleware.cors import CORSMiddleware
 from app.services import *
+from app.config import app_config
+import json
+from app.sparql_client import execute as exec_sparql
 
-# from pydantic import BaseSettings
-#
-# class AppConfig(BaseSettings):
-#     app_name: str
-#     version: str
-#     allowed_origins: list[str]
-#     database_url: str
-#     debug: bool
-#
-# with open("config.json") as config_file:
-#     config_data = json.load(config_file)
-#     config = AppConfig(**config_data)
-import uvicorn
+app = FastAPI(title="ODRE-PDS")
 
-from fastapi.responses import RedirectResponse
-from fastapi.openapi.utils import get_openapi
-
-app = FastAPI()
 
 def custom_openapi():
     if app.openapi_schema:
@@ -58,7 +46,6 @@ def custom_openapi():
     return app.openapi_schema
 
 
-
 app.openapi = custom_openapi
 
 g = initialice_graph()
@@ -76,13 +63,26 @@ class Policy(BaseModel):
     odrl_policy: dict
 
 
+if app_config.enable_config_endpoint:
+    from app.setup_router import router as setup_router
+
+    app.include_router(setup_router, prefix="/api/config")
+
+
+@app.middleware("http")
+async def check_config_enabled(request, call_next):
+    if request.url.path.startswith("/api/config") and not app_config.enable_config_endpoint:
+        return JSONResponse(status_code=403, content={"detail": "Config endpoint disabled"})
+
+    return await call_next(request)
+
 @app.get("/", response_class=RedirectResponse)
 async def redirect_fastapi():
     return "/api/policy"
 
 
 # CRUD Endpoints
-@app.post("/api/policy/", status_code=201)
+@app.post("/api/policy/", status_code=201, response_model=None)
 async def create_policy(policy: Policy, response: Response, request: Request):
     check_content(request)
     data = load_data()
@@ -98,7 +98,7 @@ async def create_policy(policy: Policy, response: Response, request: Request):
 
 
 @app.get("/api/policy/{id}")
-async def get_policy(id: str, response: Response, request: Request) :
+async def get_policy(id: str, response: Response, request: Request):
     data = load_data()
     if id not in data:
         raise HTTPException(status_code=404, detail="Policy not found")
@@ -114,9 +114,9 @@ async def get_policies(response: Response):
     response.headers["Content-Type"] = "application/ld+json"
     return data
 
+
 @app.put("/api/policy/{id}")
 async def update_policy(id: str, policy: Policy, response: Response):
-
     data = load_data()
 
     if id not in data:
@@ -151,6 +151,7 @@ async def delete_policy(id: str, response: Response):
     save_data(data, g)
     response.headers["Content-Type"] = "application/ld+json"
     return {"message": "Policy successfully deleted", "id": id}
+
 
 @app.get("/api/policy/evaluate/{id}")
 async def evaluate_policy_id(id: str, request: Request):
@@ -222,6 +223,7 @@ async def evaluate_policy(policy: Policy, request: Request, response: Response):
 
 
 # Endpoint consultas SPARQL
+'''
 @app.post("/api/policy/sparql")
 async def execute_sparql(body: dict = Body(...)):
     query = body.get('query')
@@ -233,6 +235,19 @@ async def execute_sparql(body: dict = Body(...)):
     try:
         results = g.query(query)
         return {"query": query, "result": [str(result) for result in results]}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+'''
+
+
+@app.post("/api/policy/sparql")
+def execute_sparql(body: dict = Body(...)):
+    query = body.get('query')
+    if not query:
+        raise HTTPException(status_code=400, detail="Query parameter is missing")
+    try:
+        res = exec_sparql(query)
+        return res
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -351,3 +366,11 @@ FUNCTIONS_MAP = {
     "face_recognition": face_recognition
 }
 
+if __name__ == "__main__":
+    try:
+        test_triplestore()
+    except Exception as e:
+        print(f"Fuseki no disponible: {e}")
+    import uvicorn
+
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000)

@@ -1,0 +1,9 @@
+{
+  "app_name": "policy-directory-service",
+  "version": "1.0.0",
+  "allowed_origins": ["*"],
+  "data_file": "data/policies.json",
+  "eval_log_file": "data/evaluations.json",
+  "graph_file": "data/graph.ttl",
+  "enable_config_endpoint": true
+}
