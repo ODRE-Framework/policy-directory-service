@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  fuseki:
+    image: stain/jena-fuseki
+    container_name: fuseki
+    ports:
+      - "3030:3030"
+    environment:
+      - ADMIN_PASSWORD=admin
+      - FUSEKI_DATASET_1=ds
+      - FUSEKI_DATASET_1_TYPE=tdb2
+      - FUSEKI_DATASET_1_PATH=/ds
+      - FUSEKI_DATASET_1_ALLOW_ANYUSER_READ=true
+      - FUSEKI_DATASET_1_ALLOW_ANYUSER_WRITE=true
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:3030/$/ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - odrenet
+
+  odre-pds:
+    build: .
+    image: acimmino/odre-pds:latest
+    container_name: odrepds
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - TRIPLESTORE_URL=http://fuseki:3030/ds
+      - FUSEKI_USER=admin
+      - FUSEKI_PASSWORD=admin
+    depends_on:
+      fuseki:
+        condition: service_healthy
+    volumes:
+      - ./astrea-shapes.ttl:/app/astrea-shapes.ttl
+      - ./data:/app/data
+    networks:
+      - odrenet
+
+
+networks:
+  odrenet:
+    driver: bridge

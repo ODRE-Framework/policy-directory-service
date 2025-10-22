@@ -5,9 +5,9 @@
 This project is licensed under the [Apache License 2.0](LICENSE).
 
 
-# Police Directory API
+# Policy Directory API
 
-The **Police Directory API** is a FastAPI-based system for managing and querying **privacy policies** using an **RDF model**. It facilitates the creation, storage, and retrieval of access control policies based on the **ODRL** (Open Digital Rights Language) standard.
+The **Policy Directory API** is a FastAPI-based system for managing and querying **privacy policies** using an **RDF model**. It facilitates the creation, storage, and retrieval of access control policies based on the **ODRL** (Open Digital Rights Language) standard.
 
 This API enables policy-based access control by evaluating user permissions before granting access to resources.
 
@@ -53,14 +53,14 @@ services:
 1. **Build the Docker Image**:
     
     ```bash
-    docker build -t police-directory-api .
+    docker build -t policy-directory-api .
     
     ```
     
 2. **Run the Container**:
     
     ```bash
-    docker run -p 8000:8000 police-directory-api
+    docker run -p 8000:8000 policy-directory-api
     
     ```
     
@@ -70,8 +70,8 @@ services:
 ## **Installation**
 ### 1️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/ODRE-Framework/police-directory.git
-cd police-directory
+git clone https://github.com/ODRE-Framework/policy-directory.git
+cd policy-directory
 
 ```
 
